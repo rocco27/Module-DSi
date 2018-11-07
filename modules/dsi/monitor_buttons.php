@@ -22,9 +22,10 @@
  *
  */
 
-define('OGP_LANG_dsi_long', "Динамическое изображение сервера");
-define('OGP_LANG_dsi_select_server', "Выберите сервер из раскрывающегося списка");
-define('OGP_LANG_dsi_admin_long', "Настройка Динамического изображения сервера");
-define('OGP_LANG_dsi_list', "Список Динамического изображения сервера");
-define('OGP_LANG_no_game_homes_assigned', "У вас нет серверов назначенных специально для вашего аккаунта.");
+$module_buttons = array(
+	"<a class='monitorbutton' href='?m=dsi&p=user_dsi&home_id-mod_id-ip-port=".$server_home['home_id']."-".$server_home['mod_id']."-".$server_home['ip']."-".$server_home['port']."'>
+		<img src='" . check_theme_image("images/dsi.png") . "' title='DSi'>
+		<span>DSi</span>
+	</a>"
+);	
 ?>

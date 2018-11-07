@@ -1,5 +1,47 @@
-This module generates server images like GameTracker does. Those images are dynamic, it means that they can change every time you load them
-and also generates the code to share your server stats and a game server link using html tags or the tags that are used in the forums.
+Dynamic Server Image for OGP by MadMakz
 
-Also have an Admin side for image uploads only for png extensions and max 200KB filesize.
-There are some sample images in the package.
+About:
+Creates updating images about current gameserver server status.
+Similar to the imagesignatures known from GameTracker.com or Game-Monitor.com.
+
+Features:
+- Native OGP Support
+- Image cacheing
+- Supports Game/Mod based backgrounds
+- 3 Sizes
+
+Requirements:
+- PHP-GD module
+- Apache mod_rewrite
+
+https://opengamepanel.org/forum/viewthread.php?thread_id=819
+
+
+### Help for Ubuntu systems (For other systems you can find a similar way...).
+
+1. Use the following command to enable mod_rewrite in Apache:
+
+sudo a2enmod rewrite
+
+
+--------------------
+2. Edit the file /etc/apache2/sites-enabled/000-default,
+or the file that correspond to your domain,
+find the text block that describes the main directory properties,
+by default is "/var/www" and you should change:
+
+"AllowOverride None" to "AllowOverride All".
+
+
+
+--------------------
+3.Give Write permision to this folders:
+
+modules/dsi/images
+modules/dsi/cache
+
+
+--------------------
+4. Restart Apache using:
+
+sudo /etc/init.d/apache2 restart
